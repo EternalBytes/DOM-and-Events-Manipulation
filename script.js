@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
     myBlock.style.position = "absolute"; // important so we can move the element throughout the page
     myBlock.style.top = "100px";
     myBlock.style.left = "100px";
-    myBlock.style.transition = "all .3s ease";
+    myBlock.style.transition = "all .4s ease";
     myBlock.style.boxShadow = "4px 4px 10px gray";
     document.body.appendChild(myBlock); // Add myBlock element to the body
 
@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", ()=> {
     //info element
     let info = document.createElement("div");
     info.innerHTML = `Start by pressing any arrow key or "w", "s", "a" or "d", then press Enter or Space.
-                      You can even generate random direction by pressing the "r" key. 
-                      You can also delete the given direction by clicking it. DOM Commander project from ( www.udemy.com/course/dom-javascript-project-course/ )`;
+                      You can even generate random directions by pressing the "r" key. 
+                      You can also delete the given directions by clicking them. DOM Commander project from ( www.udemy.com/course/dom-javascript-project-course/ )`;
     info.style.position = "absolute";
     info.style.width = "400px";
     info.style.bottom = "10px";
@@ -75,7 +75,7 @@ document.addEventListener("keydown", (e) => {
             addfunction("right");
             randomColor(myBlock);
             break;
-        case ' ':
+        case ' ': //When we press Enter or Space we call the function mover()
         case 'Enter':
             mover();
             break;
@@ -151,6 +151,11 @@ function mover() {
         setTimeout(mover, 300);
     }else {
         myBlock.textContent = "Set Path!";
+        myBlock.style.top = "100px";
+        myBlock.style.left = "100px";
+        myBlock.style.background = `linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+                                    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+                                    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%)`;
         return;
     }
 }
