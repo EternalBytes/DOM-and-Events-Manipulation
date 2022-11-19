@@ -1,4 +1,5 @@
 let box = document.getElementById("box"); 
+let header = document.getElementById("header"); 
 let offLeft, offTop, iniX, iniY;
 
 box.addEventListener("mousedown", function(e){
