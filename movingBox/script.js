@@ -1,5 +1,4 @@
 let box = document.getElementById("box"); 
-let header = document.getElementById("header"); 
 let offLeft, offTop, iniX, iniY;
 
 box.addEventListener("mousedown", function(e){
@@ -17,6 +16,10 @@ box.addEventListener("mousedown", function(e){
       }, false);
 
 }, false);
+
+window.addEventListener("mouseup", function(e) {
+    box.removeEventListener("mousemove", handler, false);
+  }, false);
 
 
 
