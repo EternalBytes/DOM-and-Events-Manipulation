@@ -11,17 +11,11 @@ box.addEventListener("mousedown", function(e){
     
     this.addEventListener("mousemove", handler, false);
 
-    window.addEventListener("mouseup", function(e) {
+    window.addEventListener("mouseup", function() {
         box.removeEventListener("mousemove", handler, false);
       }, false);
 
 }, false);
-
-window.addEventListener("mouseup", function(e) {
-    box.removeEventListener("mousemove", handler, false);
-  }, false);
-
-
 
 function handler(e){
   this.style.left = offLeft + e.clientX - iniX + "px";
