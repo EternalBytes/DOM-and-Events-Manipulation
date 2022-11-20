@@ -1,15 +1,16 @@
-let box = document.getElementById("box"); 
+let box = document.getElementById("box");
+let header = document.getElementById("header"); 
 let offsetLeft, offsetTop, initialX, initialY;
 
-box.addEventListener("mousedown", function(e){
+header.addEventListener("mousedown", function(e){
 
     e.preventDefault();
-    offsetLeft = this.offsetLeft;
-    offsetTop = this.offsetTop;
+    offsetLeft = box.offsetLeft;
+    offsetTop = box.offsetTop;
     initialX = e.clientX;
     initialY = e.clientY;
     
-    this.addEventListener("mousemove", handler, false);
+    box.addEventListener("mousemove", handler, false);
 
     window.addEventListener("mouseup", function() {
         box.removeEventListener("mousemove", handler, false);
