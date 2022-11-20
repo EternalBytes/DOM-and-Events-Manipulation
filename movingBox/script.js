@@ -40,12 +40,13 @@ header.addEventListener("touchstart", function(e) {
   window.addEventListener("touchend", (e)=> {
     e.preventDefault();
     box.removeEventListener("touchmove", swipe, false);
-  });
+  }, false);
+
 }, false);
 
 function swipe(e) {
   let moved = e.touches;
   this.style.left = offsetLeft + moved[0].clientX - initialX +"px";
-  this.style.top = offsetTop + moved[0].clientY - initialY +"px";
+  this.style.top =  offsetTop + moved[0].clientY - initialY +"px";
 }
   //END OF HANDLERS FOR ANDROID BROWSERS
