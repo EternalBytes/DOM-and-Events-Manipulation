@@ -26,7 +26,7 @@ function move(e){
 //END EVEND HANDLERS FOR PC AND NOTEBOOKS
 
 //START OF HANDLERS FOR ANDROID BROWSERS
-header.ontouchstart = (e)=> {
+header.addEventListener("touchstart", function(e) {
   e.preventDefault();
 
   offsetLeft = box.offsetLeft;
@@ -41,7 +41,7 @@ header.ontouchstart = (e)=> {
     e.preventDefault();
     box.removeEventListener("touchmove", swipe, false);
   });
-};
+}, false);
 
 function swipe(e) {
   let moved = e.touches;
