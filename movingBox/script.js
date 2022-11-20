@@ -37,10 +37,10 @@ header.addEventListener("touchstart", function(e) {
 
   box.addEventListener("touchmove", swipe, false);
 
-  window.addEventListener("touchend", (e)=> {
+  window.ontouchend = (e)=> {
     e.preventDefault();
     box.removeEventListener("touchmove", swipe, false);
-  }, false);
+  };
 
 }, false);
 
