@@ -22,6 +22,17 @@
     position: absolute;
     overflow: hidden;
   }
+
+  @media (max-width: 550px) {
+    .box {
+      width: 250px;
+      height: 200px;
+      font-size: .9rem;
+    }
+    .box_body {
+      padding: 5px;
+    }
+  }
   
   .box_header {
     width: 100%;
