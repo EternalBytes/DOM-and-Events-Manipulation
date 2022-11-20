@@ -1,13 +1,13 @@
 let box = document.getElementById("box"); 
-let offLeft, offTop, iniX, iniY;
+let offsetLeft, offsetTop, initialX, initialY;
 
 box.addEventListener("mousedown", function(e){
 
     e.preventDefault();
-    offLeft = this.offsetLeft;
-    offTop = this.offsetTop;
-    iniX = e.clientX;
-    iniY = e.clientY;
+    offsetLeft = this.offsetLeft;
+    offsetTop = this.offsetTop;
+    initialX = e.clientX;
+    initialY = e.clientY;
     
     this.addEventListener("mousemove", handler, false);
 
@@ -18,6 +18,6 @@ box.addEventListener("mousedown", function(e){
 }, false);
 
 function handler(e){
-  this.style.left = offLeft + e.clientX - iniX + "px";
-  this.style.top =  offTop + e.clientY - iniY + "px";
+  this.style.left = offsetLeft + e.clientX - initialX + "px";
+  this.style.top =  offsetTop + e.clientY - initialY + "px";
   }
