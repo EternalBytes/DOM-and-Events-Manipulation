@@ -1,3 +1,7 @@
+/*
+  This code was written by github.com/MayconParanhos
+*/
+
 let box = document.getElementById("box");
 let header = document.getElementById("header"); 
 let offsetLeft, offsetTop, initialX, initialY;
