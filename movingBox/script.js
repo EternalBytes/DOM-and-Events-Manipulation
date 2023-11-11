@@ -8,7 +8,6 @@ let offsetLeft, offsetTop, initialX, initialY;
 
 //START EVENT HANDLERS FOR BROWSERS ON PC AND NOTEBOOKS
 header.addEventListener("mousedown", function(e){
-
   e.preventDefault();
   offsetLeft = box.offsetLeft;
   offsetTop = box.offsetTop;
@@ -26,7 +25,7 @@ header.addEventListener("mousedown", function(e){
 function move(e){
   this.style.left = offsetLeft + e.clientX - initialX + "px";
   this.style.top =  offsetTop + e.clientY - initialY + "px";
-  }
+}
 //END EVEND HANDLERS FOR PC AND NOTEBOOKS
 
 //START OF HANDLERS FOR ANDROID BROWSERS

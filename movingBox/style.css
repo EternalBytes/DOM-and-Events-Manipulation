@@ -5,12 +5,11 @@
   }
   
   body {
+    padding: 10px;
     font-family: sans-serif;
     color: white;
-    display: flex;
     min-height: 100vh;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
   }
   
   .box {
@@ -19,8 +18,10 @@
     border-radius: 10px;
     background-color: #273f46;
     box-shadow: 5px 5px 10px gray;
-    position: absolute;
+    position: sticky;
     overflow: hidden;
+    top: calc(50% - 150px);
+    left: calc(50% - 175px);
   }
 
   @media (max-width: 550px) {
