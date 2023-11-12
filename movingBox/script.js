@@ -14,17 +14,17 @@ header.addEventListener("mousedown", function(e){
   initialX = e.clientX;
   initialY = e.clientY;
     
-  box.addEventListener("mousemove", move, false);
+  window.addEventListener("mousemove", move, false);
 
-  window.addEventListener("mouseup", function() {
-    box.removeEventListener("mousemove", move, false);
+  this.addEventListener("mouseup", function() {
+    window.removeEventListener("mousemove", move, false);
   }, false);
 
 }, false);
 
 function move(e){
-  this.style.left = offsetLeft + e.clientX - initialX + "px";
-  this.style.top =  offsetTop + e.clientY - initialY + "px";
+  box.style.left = offsetLeft + e.clientX - initialX + "px";
+  box.style.top =  offsetTop + e.clientY - initialY + "px";
 }
 //END EVEND HANDLERS FOR PC AND NOTEBOOKS
 
