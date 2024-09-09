@@ -1,5 +1,6 @@
 /*
-  This code was written by github.com/MayconParanhos
+  This code was written by github.com/EternalBytes
+  @EternalBytes
 */
 
 let box = document.getElementById("box");
