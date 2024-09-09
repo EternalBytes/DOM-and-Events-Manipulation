@@ -16,7 +16,7 @@ header.addEventListener("mousedown", function(e){
     
   window.addEventListener("mousemove", move, false);
 
-  this.addEventListener("mouseup", function() {
+  window.addEventListener("mouseup", function() {
     window.removeEventListener("mousemove", move, false);
   }, false);
 
